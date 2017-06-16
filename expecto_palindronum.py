@@ -27,6 +27,8 @@ def find_shortest_palindrome(original):
     start = 0
 
     for end in range(len(original)-1, 0, -1):
+        if start >= end:
+            break
         if original[start] == original[end]:
             t += original[start]
             start += 1
@@ -43,3 +45,4 @@ def find_shortest_palindrome(original):
 print (find_shortest_palindrome("abc"))
 print (find_shortest_palindrome("aabc"))
 print (find_shortest_palindrome("aaaaabc"))
+print (find_shortest_palindrome("aaabaaaa"))
