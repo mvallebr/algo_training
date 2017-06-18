@@ -21,12 +21,13 @@ EXPLANATION
 The shortest palindrome you can construct from 'baaa' is 'aaabaaa'.
 """
 
+
 def find_shortest_palindrome(original):
     s = ""
     t = ""
     start = 0
 
-    for end in range(len(original)-1, 0, -1):
+    for end in range(len(original) - 1, 0, -1):
         if start >= end:
             break
         if original[start] == original[end]:
@@ -38,8 +39,6 @@ def find_shortest_palindrome(original):
             t = ""
 
     return s + original
-
-
 
 
 print (find_shortest_palindrome("abc"))
