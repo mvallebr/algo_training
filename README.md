@@ -8,7 +8,9 @@ Each section contains main theory algorithms and problems related to that theory
 * [Sorting algorithms](sorting/sorting_algorithms.md) - Refresh ideas behind each of them (divide and conquer, recursion) and compare complexity of the best ones.
 * [Parsing algorithms](parsing/parsing_algorithms.md) - Most common problems for text/language/expression parsing.
 * [Greedy algorithms](greedy/greedy_algorithms.md) - Most common problems that can be solved with greedy as best option. Discussion about greedy property.
+* [Back tracking](back_tracking/back_tracking.md) - Chess problem and problems that can be solved by "brute force", without dynamic programming.
 * [Dynamic programming](dynamic_prog/dynamic_programming.md) - Most common problems that can be solved with dynamic programming as best solution
+* [Graph algorithms](graph/graph_algorithms.md) - Most common graph algorithms
 * [Linear programming](linear/linear_programming.md) - TODO
 * [String searching algorithms](string_searching/string_searching.md) - Most common algorithms for string searching and related problems
 

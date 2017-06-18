@@ -10,11 +10,11 @@ TODO
 
 ## Merge sort 
 
-TODO
+TODO - Talk about divide and conquer
 
 ## Quick sort 
 
-TODO
+TODO - Talk about ramdomization
 
 ## Radix sort
 
