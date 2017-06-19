@@ -1,5 +1,8 @@
 # Combinatorial analysis
 
+http://www.beatthegmat.com/permutations-combinations-and-anagrams-t153940.html
+https://betterexplained.com/articles/easy-permutations-and-combinations/
+
 ## Math revision
 
 TODO - arranges, permutatations, possible combinations, repetitions
