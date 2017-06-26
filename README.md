@@ -16,5 +16,4 @@ Each section contains main theory algorithms and problems related to that theory
 * [Graph algorithms](graph/graph_algorithms.md) - Most common graph algorithms
 * [Computational Geometry algorithms](geometry/geometry_algorithms.md) - K-nearest point, segment intersection, convex hull, etc.
 
-
 Juan study plan - https://github.com/juanplopes/icpc/blob/master/README.md
