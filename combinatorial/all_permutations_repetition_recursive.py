@@ -1,48 +1,30 @@
 """
-Write an algorithms that generates all permutations of strings with repeated chars, like 
+Write an algorithms that generates all permutations of strings with repeated chars, like
 '11234' or '11111' or '11211'
 
 Realize that order is not important when character is the same.
 
 ref. https://betterexplained.com/articles/easy-permutations-and-combinations/
 """
+from collections import Counter
 
 
-# SOLUTION base on algorithm L - Knuth
-# Renzo implemented a nice solution based on dictionary comparison - https://github.com/renzon/code_interview_training/blob/0e06e1d872ebc8edf1a2667296f95e15b9172378/perm_with_rep.py#L19-L19
-
-def find_all_permutations_r(prefix, sublist):
-    if len(sublist) == 1:
-        print ("prefix = {} sublist = {}".format(prefix, sublist))
-        yield prefix + sublist
-        return
-    for pivot in range(len(sublist)):
-        print ("prefix = {} sublist = {} pivot = {}".format(prefix, sublist, pivot))
-        # Exchange first char by pivot
-        if (sublist[0] == sublist[pivot] and pivot != 0) or sublist[0] in prefix:
-            print ("continue")
+def all_perms_r(curr, unique, freqs):
+    if len([v for v in freqs.values() if v > 0]) == 0:
+        yield curr[:]
+    for i in range(len(unique)):
+        if freqs[unique[i]] == 0:
             continue
-        temp = sublist[pivot]
-        sublist[pivot] = sublist[0]
-        sublist[0] = temp
-        yield from find_all_permutations_r(prefix + [sublist[0]], sublist[1:])
-        # Exchange back
-        sublist[0] = sublist[pivot]
-        sublist[pivot] = temp
+        ch = unique[i]
+        freqs[unique[i]] -= 1
+        yield from all_perms_r(curr + ch, unique, freqs)
+        freqs[unique[i]] += 1
 
+def all_perms(a):
+    yield from all_perms_r("", sorted(Counter(a).keys()), Counter(a))
 
-def find_all_permutations(l):
-    for perm in find_all_permutations_r(list(), l):
-        yield perm
+l = list(all_perms(list("aac")))
+print("aac", str(l), len(l))
 
-
-def test_it(input):
-    print ("\nInput = {}\n".format(input))
-    for i, p in enumerate(find_all_permutations(list(input))):
-        print ("p[{}] = {}".format(i+1, p))
-
-
-test_it("112")
-test_it("1112")
-test_it("1111")
-test_it("1122")
+l = list(all_perms(list("aabc")))
+print("aabc", str(l), len(l))
