@@ -13,10 +13,10 @@ def find_all_permutations_r(prefix, sublist):
         yield prefix + sublist
     for pivot in range(len(sublist)):
         # Exchange first char by pivot
-        sublist[0], sublist[pivot] = sublist[pivot], sublist[0] 
+        sublist[0], sublist[pivot] = sublist[pivot], sublist[0]
         yield from find_all_permutations_r(prefix + [sublist[0]], sublist[1:])
         # Exchange back
-        sublist[0], sublist[pivot] = sublist[pivot], sublist[0] 
+        sublist[0], sublist[pivot] = sublist[pivot], sublist[0]
 
 
 def find_all_permutations(l):
