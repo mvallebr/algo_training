@@ -6,7 +6,7 @@ Given a string, find the longest substring which is palindrome. For example, if 
 
 def max_palindrome(s, ini, end):
     """ Returns a tuple with ini and end of max palindrome found from initial (ini, end)"""
-    while ini > 0 and end < len(s):
+    while ini > 0 and end < len(s)-1:
         if s[ini - 1] == s[end + 1]:
             ini -= 1
             end += 1
@@ -41,5 +41,7 @@ def test(s):
 
 test("forgeeksskeegfor")
 test("forgeekskeegfor")
+test("forrofabc")
+test("abcforrof")
 test("abcdefgh")
 test("1234567654345678987654321")
