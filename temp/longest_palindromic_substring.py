@@ -1,4 +1,4 @@
 """
 Find the longest palindromic substring  from the given string. 
-(No need of DP solution.)
+(I've heard there is no need of DP solution.)
 """
