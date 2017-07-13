@@ -21,3 +21,7 @@ https://en.wikipedia.org/wiki/Held%E2%80%93Karp_algorithm
 ## Approximating string search
 
 TODO
+
+## Other problems
+
+Climb Stairs, House Robber, Combination Sum, Palindromic Substring, Max product subarray, Frog Jump, Coin Change, Unique Paths, LIS, minimum path sum, subset-sum problem

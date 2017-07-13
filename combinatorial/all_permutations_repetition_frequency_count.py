@@ -13,7 +13,7 @@ ref. https://betterexplained.com/articles/easy-permutations-and-combinations/
 from collections import Counter
 
 def all_perms_r(curr, unique, freqs):
-    if len([v for v in freqs.values() if v > 0]) == 0:
+    if len(v for v in freqs.values() if v > 0) == 0:
         yield curr[:]
     for i in range(len(unique)):
         if freqs[unique[i]] == 0:
