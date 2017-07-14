@@ -28,7 +28,7 @@ def all_perms_r(seq):
     yield seq[:]
     if end < 1:  # sequence of 1 element
         return
-    while j >= 0:
+    while True:
         j = end - 1
         # Find first sequence of 2 elements when first < second
         while j >= 0 and not seq[j] < seq[j + 1]:
