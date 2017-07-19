@@ -11,3 +11,12 @@ https://en.wikipedia.org/wiki/Minimum_cut
 # Dijkstra shortest path
 
 See greedy algorithms section, it's there
+
+# Kruskal’s algorithm 
+
+TODO
+
+# Prim’s algorithm 
+
+TODO
+
