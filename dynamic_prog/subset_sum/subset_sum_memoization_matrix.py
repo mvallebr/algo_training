@@ -7,8 +7,8 @@ For instance, for L = [-7, -3, -2, 5, 8] and X = 0, the answer is True - [-3, -2
 
 def subset_sum(l, x):
     """l should be order as input"""
-    bottom = min(l)
-    top = x
+    bottom = sum(n for n in l if n <=0)
+    top = sum(n for n in l if n >=0)
 
     # stores whether col can be formed with elements of row
     n_rows = len(l)  # Each row is 1 element of input list
@@ -25,11 +25,8 @@ def subset_sum(l, x):
         for col in range(n_cols):
             col_v = col + bottom
             # Can I sum COL with elements l[:row] ?
-            if l[row] - col_v == 0:
-                m[_id(row, col)] = True
-            else:
-                m[_id(row, col)] = _get_m(
-                    row - 1, col) or _get_m(row - 1, col - l[row])
+            m[_id(row, col)] = _get_m(
+                row - 1, col) or _get_m(row - 1, col - l[row]) or l[row] == col_v
 
     # At this point, if a boolean value is enough, we should return _get_m(n_rows - 1, n_cols - 1)
 
@@ -44,7 +41,7 @@ def subset_sum(l, x):
 
     # Get Resulting set traversing through the memoazing matrix
     result = []
-    col = n_cols - 1
+    col = x - bottom
     row = n_rows - 1
     while _get_m(row, col):
         while _get_m(row - 1, col):
