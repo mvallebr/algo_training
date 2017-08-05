@@ -1,4 +1,5 @@
-"""
+# Airline company problem - minimum spanning tree
+
 A new airline company is setting up operations and needs your help! They want to optimize their routes so as to cover a full list of cities, wile minimizing the cost of their operations. 
 You are provided with the number of N cities and with the costs of operating flights between some of the cities. 
 Can you design an algorithm that will return the list of routes that cover all the N cities at the minimum operational cost? 
@@ -47,5 +48,3 @@ Output
 4 5 0.35 
 6 2 0.40 
 1.81
-
-"""
