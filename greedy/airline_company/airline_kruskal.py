@@ -11,12 +11,28 @@ import re
 class Graph():
     def __init__(self):
         self.nodes = set()
+        self.parent_nodes = dict()
         self.edges = defaultdict(list)
+
+    def find_root(self, node):
+        return node if self.parent_nodes[node] == node else self.find_root(self.parent_nodes[node])
+
+    def are_nodes_connected(self, node1, node2):
+        return node1 in self.parent_nodes and node2 in self.parent_nodes and self.find_root(node1) == self.find_root(node2)
+
+    def connect_nodes(self, node1, node2):
+        self.parent_nodes[self.find_root(
+            node2)] = self.parent_nodes[self.find_root(node1)]
 
     def add_edge(self, node1, node2, weight):
         self.nodes.add(node1)
         self.nodes.add(node2)
         self.edges[weight].append((node1, node2))
+        if node1 not in self.parent_nodes:
+            self.parent_nodes[node1] = node1
+        if node2 not in self.parent_nodes:
+            self.parent_nodes[node2] = node2
+        self.connect_nodes(node1, node2)
 
     def iterate_sorted_edges(self):
         for edge in sorted(self.edges.keys()):
@@ -29,6 +45,9 @@ class Graph():
                 l.append("{} {} {}".format(node1, node2, edge))
         return "\n".join(l)
 
+    def sum_of_weights(self):
+        return sum(self.edges.keys())
+
 
 def read_input(file_name):
     with open(os.path.join(os.path.dirname(__file__), "input.txt")) as f:
@@ -36,7 +55,7 @@ def read_input(file_name):
     num_cities = int(lines[0])
     num_routes = int(lines[1])
     # Example "4 5 0.35 ""
-    pattern = re.compile("(?P<city1>\d)\s.*(?P<city2>\d)\s.*(?P<cost>\d\.\d)")
+    pattern = re.compile("(?P<city1>\d)\s.*(?P<city2>\d)\s.*(?P<cost>\d.*\.\d.*)")
     result = Graph()
     for i in range(2, num_routes):
         match = pattern.match(lines[i])
@@ -50,19 +69,21 @@ def read_input(file_name):
 def main():
     graph = read_input("input.txt")
 
-    print ("graph:")
+    print ("input:")
     print (graph)
 
     result = Graph()
     for weight, cities_list in graph.iterate_sorted_edges():
         for city1, city2 in cities_list:
-            print(result.nodes)
-            # The check here is wrong, what I need to check is whether the 2 subtrees are already connected or not
-            if city1 not in result.nodes or city2 not in result.nodes: 
+            if not result.are_nodes_connected(city1, city2):
                 result.add_edge(city1, city2, weight)
+
+    if len(result.nodes) != len(graph.nodes):
+        raise Exception("Couldn't find a minimum spanning tree")
 
     print ("output")
     print (result)
+    print (result.sum_of_weights())
 
 
 if __name__ == "__main__":
