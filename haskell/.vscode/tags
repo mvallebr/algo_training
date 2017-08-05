@@ -1,0 +1,90 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+X	../simple/pair_of_elements/pair_of_elements_with_sum_return_bool.py	/^X = 5$/;"	kind:variable	line:19
+X	../simple/pair_of_elements/pair_of_elements_with_sum_return_bool.py	/^X = 50$/;"	kind:variable	line:25
+X	../simple/pair_of_elements/pair_of_elements_with_sum_return_bool.py	/^X = 50$/;"	kind:variable	line:30
+X	../simple/pair_of_elements/pair_of_elements_with_sum_return_bool.py	/^X = 50$/;"	kind:variable	line:35
+X	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple.py	/^X = 5$/;"	kind:variable	line:17
+X	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple.py	/^X = 50$/;"	kind:variable	line:22
+X	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple.py	/^X = 50$/;"	kind:variable	line:27
+X	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple_values.py	/^X = 5$/;"	kind:variable	line:17
+X	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple_values.py	/^X = 50$/;"	kind:variable	line:22
+X	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple_values.py	/^X = 50$/;"	kind:variable	line:27
+_get_m	../dynamic_prog/subset_sum/subset_sum_memoization_matrix.py	/^    def _get_m(row, col):$/;"	kind:function	line:21
+_id	../dynamic_prog/subset_sum/subset_sum_memoization_matrix.py	/^    def _id(row, col): return row * n_cols + col$/;"	kind:function	line:19
+airline_description.py	../greedy/airline_company/airline_description.py	1;"	kind:file	line:1
+all_combinations.py	../combinatorial/all_combinations.py	1;"	kind:file	line:1
+all_perms	../combinatorial/all_permutations_no_repetition_recursive2.py	/^def all_perms(a, ini):$/;"	kind:function	line:12
+all_perms	../combinatorial/all_permutations_repetition_frequency_count.py	/^def all_perms(a):$/;"	kind:function	line:26
+all_perms	../combinatorial/all_permutations_repetition_l_algorithm.py	/^def all_perms(seq):$/;"	kind:function	line:51
+all_perms_r	../combinatorial/all_permutations_repetition_frequency_count.py	/^def all_perms_r(curr, unique, freqs):$/;"	kind:function	line:15
+all_perms_r	../combinatorial/all_permutations_repetition_l_algorithm.py	/^def all_perms_r(seq):$/;"	kind:function	line:23
+all_permutations_no_repetition.py	../combinatorial/all_permutations_no_repetition.py	1;"	kind:file	line:1
+all_permutations_no_repetition_itertools.py	../combinatorial/all_permutations_no_repetition_itertools.py	1;"	kind:file	line:1
+all_permutations_no_repetition_recursive.py	../combinatorial/all_permutations_no_repetition_recursive.py	1;"	kind:file	line:1
+all_permutations_no_repetition_recursive2.py	../combinatorial/all_permutations_no_repetition_recursive2.py	1;"	kind:file	line:1
+all_permutations_repetition.py	../combinatorial/all_permutations_repetition.py	1;"	kind:file	line:1
+all_permutations_repetition_frequency_count.py	../combinatorial/all_permutations_repetition_frequency_count.py	1;"	kind:file	line:1
+all_permutations_repetition_l_algorithm.py	../combinatorial/all_permutations_repetition_l_algorithm.py	1;"	kind:file	line:1
+all_sub_permutations.py	../combinatorial/all_sub_permutations.py	1;"	kind:file	line:1
+anagrams_in_1mb.py	../combinatorial/anagrams_in_1mb.py	1;"	kind:file	line:1
+anagrams_in_1tb.py	../combinatorial/anagrams_in_1tb.py	1;"	kind:file	line:1
+assertListEquals	../back_tracking/n_chess/n_chess_problem_recursive.py	/^def assertListEquals(l1, l2):$/;"	kind:function	line:59
+count_num_perms	../combinatorial/all_permutations_no_repetition_recursive.py	/^def count_num_perms(input):$/;"	kind:function	line:27
+expecto_palindronum.py	../string_searching/problems/expecto_palindronum.py	1;"	kind:file	line:1
+find_all_permutations	../combinatorial/all_permutations_no_repetition_recursive.py	/^def find_all_permutations(l):$/;"	kind:function	line:22
+find_all_permutations_r	../combinatorial/all_permutations_no_repetition_recursive.py	/^def find_all_permutations_r(prefix, sublist):$/;"	kind:function	line:11
+find_pair_with_sum	../simple/pair_of_elements/pair_of_elements_with_sum_return_bool.py	/^def find_pair_with_sum(X, l):$/;"	kind:function	line:6
+find_pair_with_sum	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple.py	/^def find_pair_with_sum(X, l):$/;"	kind:function	line:5
+find_pair_with_sum	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple_values.py	/^def find_pair_with_sum(X, l):$/;"	kind:function	line:5
+find_shortest_palindrome	../string_searching/problems/expecto_palindronum.py	/^def find_shortest_palindrome(original):$/;"	kind:function	line:25
+greed1.py	../greedy/coursera/greed1/greed1.py	1;"	kind:file	line:1
+is_marked	../back_tracking/n_chess/n_chess_problem_recursive.py	/^def is_marked(board, row, col):$/;"	kind:function	line:37
+job_list	../greedy/coursera/greed1/greed1.py	/^    job_list = [(int(t[0]), int(t[1]))$/;"	kind:variable	line:4
+jobs	../greedy/coursera/greed1/greed1.py	/^    jobs = sorted(job_list, key=lambda x: x[0] - x[1], reverse=False)$/;"	kind:variable	line:6
+l	../combinatorial/all_permutations_no_repetition_recursive2.py	/^l = list(all_perms(list("abc"), 0))$/;"	kind:variable	line:20
+l	../combinatorial/all_permutations_repetition_frequency_count.py	/^l = list(all_perms(list("aabc")))$/;"	kind:variable	line:32
+l	../combinatorial/all_permutations_repetition_frequency_count.py	/^l = list(all_perms(list("aac")))$/;"	kind:variable	line:29
+l	../combinatorial/all_permutations_repetition_l_algorithm.py	/^l = list(all_perms(list("112")))$/;"	kind:variable	line:54
+l	../combinatorial/all_permutations_repetition_l_algorithm.py	/^l = list(all_perms(list("1123")))$/;"	kind:variable	line:57
+l	../simple/pair_of_elements/pair_of_elements_with_sum_return_bool.py	/^l = [-16, 50, 17, 33, 51, 0]$/;"	kind:variable	line:24
+l	../simple/pair_of_elements/pair_of_elements_with_sum_return_bool.py	/^l = [-16, 66, 50, 17, 33, 51, 0]$/;"	kind:variable	line:29
+l	../simple/pair_of_elements/pair_of_elements_with_sum_return_bool.py	/^l = [-167, 66, 50, 17, 34, 51, 10]$/;"	kind:variable	line:34
+l	../simple/pair_of_elements/pair_of_elements_with_sum_return_bool.py	/^l = [3, 34, 4, 12, 5, 2]$/;"	kind:variable	line:18
+l	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple.py	/^l = [-16, 50, 17, 33, 51, 0]$/;"	kind:variable	line:21
+l	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple.py	/^l = [-16, 66, 50, 17, 33, 51, 0]$/;"	kind:variable	line:26
+l	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple.py	/^l = [3, 34, 4, 12, 5, 2]$/;"	kind:variable	line:16
+l	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple_values.py	/^l = [-16, 50, 17, 33, 51, 0]$/;"	kind:variable	line:21
+l	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple_values.py	/^l = [-16, 66, 50, 17, 33, 51, 0]$/;"	kind:variable	line:26
+l	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple_values.py	/^l = [3, 34, 4, 12, 5, 2]$/;"	kind:variable	line:16
+longest_palindrome	../dynamic_prog/longest_palindromic_subsequence/longest_palindromic_substring.py	/^def longest_palindrome(s):$/;"	kind:function	line:18
+longest_palindromic_substring.py	../dynamic_prog/longest_palindromic_subsequence/longest_palindromic_substring.py	1;"	kind:file	line:1
+mark_board	../back_tracking/n_chess/n_chess_problem_recursive.py	/^def mark_board(board, row, col, value):$/;"	kind:function	line:22
+matrix	../back_tracking/n_chess/n_chess_problem_recursive.py	/^def matrix(n):$/;"	kind:function	line:13
+max_palindrome	../dynamic_prog/longest_palindromic_subsequence/longest_palindromic_substring.py	/^def max_palindrome(s, ini, end):$/;"	kind:function	line:7
+n_chess_problem_recursive.py	../back_tracking/n_chess/n_chess_problem_recursive.py	1;"	kind:file	line:1
+n_queens_chess	../back_tracking/n_chess/n_chess_problem_recursive.py	/^def n_queens_chess(n, board):$/;"	kind:function	line:41
+pair_of_elements_with_sum_return_bool.py	../simple/pair_of_elements/pair_of_elements_with_sum_return_bool.py	1;"	kind:file	line:1
+pair_of_elements_with_sum_x.py	../simple/pair_of_elements/pair_of_elements_with_sum_x.py	1;"	kind:file	line:1
+pair_of_elements_with_sum_x_return_tuple.py	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple.py	1;"	kind:file	line:1
+pair_of_elements_with_sum_x_return_tuple_values.py	../simple/pair_of_elements/pair_of_elements_with_sum_x_return_tuple_values.py	1;"	kind:file	line:1
+print_all_perms	../combinatorial/all_permutations_no_repetition_itertools.py	/^def print_all_perms(input):$/;"	kind:function	line:12
+print_all_perms	../combinatorial/all_permutations_no_repetition_recursive.py	/^def print_all_perms(input):$/;"	kind:function	line:34
+print_m	../dynamic_prog/subset_sum/subset_sum_memoization_matrix.py	/^    def print_m():$/;"	kind:function	line:33
+r	../back_tracking/n_chess/n_chess_problem_recursive.py	/^r = n_queens_chess(4, matrix(4))$/;"	kind:variable	line:63
+reverse	../combinatorial/all_permutations_repetition_l_algorithm.py	/^def reverse(seq, start, end):$/;"	kind:function	line:16
+s1	../dynamic_prog/subset_sum/subset_sum_recursive.py	/^s1 = set(next(subset_sum([-7, -3, -2, 5, 8], 0)))$/;"	kind:variable	line:26
+s2	../dynamic_prog/subset_sum/subset_sum_recursive.py	/^s2 = set([-3, -2, 5])$/;"	kind:variable	line:27
+select_max_sum_boxes_no_adjacent.py	../temp/select_max_sum_boxes_no_adjacent.py	1;"	kind:file	line:1
+subset_sum	../dynamic_prog/subset_sum/subset_sum.py	/^def subset_sum(l, x):$/;"	kind:function	line:8
+subset_sum	../dynamic_prog/subset_sum/subset_sum_memoization_matrix.py	/^def subset_sum(l, x):$/;"	kind:function	line:8
+subset_sum	../dynamic_prog/subset_sum/subset_sum_recursive.py	/^def subset_sum(l, x):$/;"	kind:function	line:20
+subset_sum.py	../dynamic_prog/subset_sum/subset_sum.py	1;"	kind:file	line:1
+subset_sum_memoization_matrix.py	../dynamic_prog/subset_sum/subset_sum_memoization_matrix.py	1;"	kind:file	line:1
+subset_sum_r	../dynamic_prog/subset_sum/subset_sum_recursive.py	/^def subset_sum_r(current, l, x):$/;"	kind:function	line:8
+subset_sum_recursive.py	../dynamic_prog/subset_sum/subset_sum_recursive.py	1;"	kind:file	line:1
+test	../dynamic_prog/longest_palindromic_subsequence/longest_palindromic_substring.py	/^def test(s):$/;"	kind:function	line:37
