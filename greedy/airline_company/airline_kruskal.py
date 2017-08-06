@@ -58,15 +58,15 @@ class KruskalGraph():
 
 
 def read_input(file_name):
-    with open(os.path.join(os.path.dirname(__file__), "input.txt")) as f:
+    with open(os.path.join(os.path.dirname(__file__), file_name)) as f:
         lines = f.readlines()
     num_cities = int(lines[0])
     num_routes = int(lines[1])
-    # Example "4 5 0.35 ""
+    # Example "4 5 0.35"
     pattern = re.compile(
-        "(?P<city1>\d)\s.*(?P<city2>\d)\s.*(?P<cost>\d.+\.?\d.*)")
+        "(?P<city1>\d)\s+(?P<city2>\d)\s+(?P<cost>\d.+\.?\d.*)")
     result = KruskalGraph()
-    for i in range(2, num_routes):
+    for i in range(2, len(lines)):
         match = pattern.match(lines[i])
         city1 = match.group("city1")
         city2 = match.group("city2")
