@@ -16,7 +16,12 @@ class KruskalGraph():
         self.edges = defaultdict(list)
 
     def find_root(self, node):
-        return node if self.parent_nodes[node] == node else self.find_root(self.parent_nodes[node])
+        if node not in self.parent_nodes or self.parent_nodes[node] == node:
+            return node
+        else:
+            self.parent_nodes[node] = self.find_root(
+                self.parent_nodes[node])  # path compression
+            return self.parent_nodes[node]
 
     def are_nodes_connected(self, node1, node2):
         return node1 in self.parent_nodes and node2 in self.parent_nodes and self.find_root(node1) == self.find_root(node2)
