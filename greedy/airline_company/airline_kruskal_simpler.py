@@ -47,7 +47,7 @@ def kruskal_union_find(graph):
                 parent_nodes[root1] = root2
             else:
                 parent_nodes[root2] = root1
-                if ranks[root2] < ranks[root1]:
+                if ranks[root2] == ranks[root1]:
                     ranks[root1] += 1
             yield node1, node2, weigth
 
