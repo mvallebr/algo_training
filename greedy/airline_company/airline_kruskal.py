@@ -10,7 +10,6 @@ import re
 
 class KruskalGraph():
     def __init__(self):
-        self.nodes = set()
         self.parent_nodes = dict()
         self.ranks = defaultdict(int)  # Disjoint set optimization
         # key = weight, value = list of tuples (node1, node2)
@@ -33,8 +32,6 @@ class KruskalGraph():
                 self.ranks[root1] += 1
 
     def add_edge(self, node1, node2, weight):
-        self.nodes.add(node1)
-        self.nodes.add(node2)
         self.edges[weight].append((node1, node2))
         if node1 not in self.parent_nodes:
             self.parent_nodes[node1] = node1
@@ -86,9 +83,6 @@ def main():
         for city1, city2 in cities_list:
             if not result.are_nodes_connected(city1, city2):
                 result.add_edge(city1, city2, weight)
-
-    if len(result.nodes) != len(graph.nodes):
-        raise Exception("Couldn't find a minimum spanning tree")
 
     print ("output")
     print (result)
