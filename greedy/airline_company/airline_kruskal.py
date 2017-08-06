@@ -8,10 +8,12 @@ import os
 import re
 
 
-class Graph():
+class KruskalGraph():
     def __init__(self):
         self.nodes = set()
         self.parent_nodes = dict()
+        self.ranks = defaultdict(int)  # Disjoint set optimization
+        # key = weight, value = list of tuples (node1, node2)
         self.edges = defaultdict(list)
 
     def find_root(self, node):
@@ -21,8 +23,14 @@ class Graph():
         return node1 in self.parent_nodes and node2 in self.parent_nodes and self.find_root(node1) == self.find_root(node2)
 
     def connect_nodes(self, node1, node2):
-        self.parent_nodes[self.find_root(
-            node2)] = self.parent_nodes[self.find_root(node1)]
+        root1 = self.find_root(node1)
+        root2 = self.find_root(node2)
+        if self.ranks[root1] < self.ranks[root2]:
+            self.parent_nodes[root1] = root2
+        else:
+            self.parent_nodes[root2] = root1
+            if self.ranks[root2] == self.ranks[root1]:
+                self.ranks[root1] += 1
 
     def add_edge(self, node1, node2, weight):
         self.nodes.add(node1)
@@ -55,8 +63,9 @@ def read_input(file_name):
     num_cities = int(lines[0])
     num_routes = int(lines[1])
     # Example "4 5 0.35 ""
-    pattern = re.compile("(?P<city1>\d)\s.*(?P<city2>\d)\s.*(?P<cost>\d.*\.\d.*)")
-    result = Graph()
+    pattern = re.compile(
+        "(?P<city1>\d)\s.*(?P<city2>\d)\s.*(?P<cost>\d.+\.?\d.*)")
+    result = KruskalGraph()
     for i in range(2, num_routes):
         match = pattern.match(lines[i])
         city1 = match.group("city1")
@@ -72,7 +81,7 @@ def main():
     print ("input:")
     print (graph)
 
-    result = Graph()
+    result = KruskalGraph()
     for weight, cities_list in graph.iterate_sorted_edges():
         for city1, city2 in cities_list:
             if not result.are_nodes_connected(city1, city2):
