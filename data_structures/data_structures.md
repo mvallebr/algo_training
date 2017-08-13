@@ -119,6 +119,10 @@ Summary is - there are 3 situations to decide:
 * Sometimes, you must check the min or max as you process elements. HEAP is suitable for this case.
 * Sometimes, you must find any element on a collection as you insert elements. BST is useful in this case.
 
+### Tree representation in arrays
+
+http://www.ad.ntust.edu.tw/course/ad5601701/lecture9.htm#arep
+
 ### AVL
 
 AVL tree is a self-balancing binary search tree. When we refer to BST, we are usually referring to an AVL.
